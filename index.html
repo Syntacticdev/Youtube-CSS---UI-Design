@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="profile-card">
+        <div class="top-overlay">
+            <h1>Dylan Jacobs</h1>
+            <span>Visual Designer</span>
+        </div>
+        <img class="profile-img" src="user.png" alt="">
+        <button class="action-btn">View Profile</button>
+        <div class="overlay-1">
+            <button class="close-detail">+</button>
+            <div class="profile-details">
+                <h1>Dylan Jacobs</h1>
+                <div>
+                    <span>Visual Designer</span>
+                    <span>United States</span>
+                </div>
+            </div>
+            <div class="count-container">
+                <div>
+                    <span class="count">14k</span>
+                    <span class="type">Followers</span>
+                </div>
+                <div>
+                    <span class="count">259</span>
+                    <span class="type">Following</span>
+                </div>
+                <div>
+                    <span class="count">3k</span>
+                    <span class="type">Likes</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const show_btn = document.querySelector(".action-btn")
+        const overlayOne = document.querySelector(".overlay-1")
+        const topOverlay = document.querySelector(".top-overlay")
+        const close_btn = document.querySelector(".close-detail")
+        show_btn.addEventListener('click', toggleShow)
+        close_btn.addEventListener('click', toggleShow)
+
+        function toggleShow() {
+            overlayOne.classList.toggle('show')
+            topOverlay.classList.toggle('hide')
+        }
+    </script>
+</body>
+
+</html>

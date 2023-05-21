@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    background: blueviolet;
+}
+
+button {
+    cursor: pointer;
+}
+
+.profile-card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: gray;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-overlay {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #fff;
+    transition: all .5s ease-in-out;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.top-overlay h1 {
+    font-size: 25px;
+    transition: all .5s ease-in-out;
+}
+
+.top-overlay span {
+    color: yellow;
+    font-weight: 700;
+}
+
+.overlay-1 {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    background: #fff;
+    height: 50%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    /* display: none; */
+    transition: all .5s ease-in-out;
+}
+
+.overlay-1.show {
+    bottom: 0;
+}
+
+.overlay-1 button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: yellow;
+    border: none;
+    outline: none;
+    right: 20px;
+    top: -20px;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, .3);
+}
+
+.profile-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-details>div {
+    margin-top: 10px;
+    display: flex;
+    gap: .5em;
+}
+
+.profile-details>div span {
+    font-size: 14px;
+}
+
+.count-container {
+    border-top: 2px solid gainsboro;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.count-container>div:nth-of-type(even) {
+    border-inline: 2px solid gainsboro;
+}
+
+.count-container>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.count-container>div span:first-child {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(121, 78, 78);
+}
+
+.count-container>div span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: grey;
+}
+
+.action-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: yellow;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.top-overlay.hide {
+    right: -100%;
+}
